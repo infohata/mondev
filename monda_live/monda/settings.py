@@ -24,9 +24,9 @@ BASE_DIR = Path(__file__).resolve().parent.parent
 SECRET_KEY = local_settings.SECRET_KEY
 
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = True
+DEBUG = local_settings.DEBUG or True
 
-ALLOWED_HOSTS = []
+ALLOWED_HOSTS = local_settings.ALLOWED_HOSTS or []
 
 
 # Application definition
@@ -189,8 +189,8 @@ EMAIL_USE_TLS = True
 EMAIL_HOST_USER = local_settings.EMAIL_ID
 EMAIL_HOST_PASSWORD = local_settings.EMAIL_PW
 DEFAULT_FROM_EMAIL = local_settings.DEFAULT_FROM_EMAIL # no_reply@MoNDA.live
-LOGIN_URL = 'login'
 EXPIRE_AFTER = '2m' # email expires after 2 minutes, MAX_RETRIES = 2(default)
+LOGIN_URL = 'login'
 
 VERIFICATION_SUCCESS_MSG = """Your Email is verified successfully and account has been activated.
 You can login with the credentials now..."""

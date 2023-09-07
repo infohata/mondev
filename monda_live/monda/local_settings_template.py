@@ -7,3 +7,5 @@ POSTGRES_HOST='postgres'
 EMAIL_ID='yourmail@gmail.com'
 EMAIL_PW='googlesecretkey'
 DEFAULT_FROM_EMAIL = 'defaultnoreply@email.com'
+DEBUG=True
+ALLOWED_HOSTS=[]
