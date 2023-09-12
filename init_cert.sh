@@ -5,7 +5,7 @@ if ! [ -x "$(command -v docker-compose)" ]; then
   exit 1
 fi
 
-domains=(gka.lt)
+domains=(gka.lt gerokodoakademija.lt)
 rsa_key_size=4096
 data_path="./nginx/certbot"
 email="kestas@kpa.lt" # Adding a valid address is strongly recommended
