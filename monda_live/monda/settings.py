@@ -27,7 +27,7 @@ SECRET_KEY = local_settings.SECRET_KEY
 DEBUG = local_settings.DEBUG or True
 
 ALLOWED_HOSTS = local_settings.ALLOWED_HOSTS or []
-
+CSRF_TRUSTED_ORIGINS = local_settings.CSRF_TRUSTED_ORIGINS
 
 # Application definition
 
