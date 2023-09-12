@@ -1,7 +1,7 @@
 version: '3.7'
 services:
   monda:
-    build: 
+    build:
       context: .
       args:
         run_as: ${RUN_AS_USER}
@@ -38,7 +38,7 @@ services:
       - ./monda_live/monda/local_settings.py
     # user: "${RUN_AS_USER}:${RUN_AS_GROUP}"
   nginx:
-    build: 
+    build:
       context: ./nginx/.
       args:
         run_as: ${RUN_AS_USER}
@@ -47,6 +47,7 @@ services:
     restart: always
     ports:
       - 80:80
+      - 443:443
     links:
       - monda:monda
     depends_on:

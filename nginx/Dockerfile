@@ -4,4 +4,4 @@ ARG run_as
 ENV run_as=${run_as}
 RUN adduser $run_as
 WORKDIR /app
-COPY ./monda_live.conf /etc/nginx/conf.d/monda_live.conf
+COPY ./monda_live.conf /etc/nginx/conf.d/default.conf
